@@ -1,0 +1,12 @@
+services:
+  nesta-app-store:
+    build: .
+    container_name: nesta-app-store
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./uploads:/app/uploads
+      - ./data:/app/data
