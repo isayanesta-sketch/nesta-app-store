@@ -1,1 +1,173 @@
 
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NESTA ADMIN</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #eef3fa;
+  color: #172554;
+}
+.container {
+  max-width: 750px;
+  margin: 30px auto;
+}
+header {
+  background: #123c91;
+  color: white;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+}
+header h1 {
+  margin: 0 0 8px;
+}
+.card {
+  background: white;
+  padding: 24px;
+  margin-top: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 15px #0001;
+}
+h2 {
+  color: #123c91;
+  margin-top: 0;
+}
+label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: bold;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd5e5;
+  border-radius: 8px;
+  font-size: 15px;
+}
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+button {
+  border: 0;
+  padding: 13px 18px;
+  border-radius: 8px;
+  background: #1554c0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #0d3580;
+}
+#upload {
+  width: 100%;
+  margin-top: 20px;
+}
+#refresh {
+  margin-bottom: 15px;
+}
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-bottom: 1px solid #ddd;
+}
+.item button {
+  background: #dc2626;
+}
+footer {
+  text-align: center;
+  color: #64748b;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+<h1>NESTA APP STORE</h1>
+<p>ADMINISTRATION PANEL</p>
+</header>
+
+<div class="card">
+<h2>🔐 Connexion Admin</h2>
+
+<label>Mot de passe Admin</label>
+<input type="password" id="password"
+placeholder="Ampidiro ny mot de passe">
+
+</div>
+
+<div class="card">
+<h2>📱 Ajouter une application</h2>
+
+<label>Nom de l'application</label>
+<input type="text" id="name"
+placeholder="Ohatra: NESTA TV">
+
+<label>Catégorie</label>
+<select id="category">
+<option value="TV">TV</option>
+<option value="Video">Video</option>
+<option value="Musique">Musique</option>
+<option value="Jeux">Jeux</option>
+<option value="Outils">Outils</option>
+<option value="Autres">Autres</option>
+</select>
+
+<label>Version</label>
+<input type="text" id="version"
+placeholder="Ohatra: 1.0.0">
+
+<label>Description</label>
+<textarea id="description"
+placeholder="Mombamomba ny application"></textarea>
+
+<label>Fichier APK</label>
+<input type="file" id="apk" accept=".apk,application/vnd.android.package-archive">
+
+<button id="upload">📤 UPLOAD APK</button>
+
+<p id="result"></p>
+</div>
+
+<div class="card">
+<h2>📦 Applications enregistrées</h2>
+
+<button id="refresh">🔄 Actualiser</button>
+
+<div id="list">
+Mbola tsy misy APK.
+</div>
+</div>
+
+<footer>
+© 2026 NESTA APP STORE MG
+</footer>
+
+</div>
+
+<script src="/admin.js" defer></script>
+</body>
+</html>
+
